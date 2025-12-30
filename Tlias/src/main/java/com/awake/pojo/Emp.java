@@ -1,4 +1,5 @@
 package com.awake.pojo;
+// 员工类
 
 import lombok.Data;
 
@@ -26,5 +27,5 @@ public class Emp {
     private String deptName;
 
     //封装工作经历信息
-    private List<EmpExpr>exprList;
+    private List<EmpExpr> exprList;
 }

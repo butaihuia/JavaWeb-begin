@@ -112,7 +112,23 @@
                  left join emp_expr ee on e.id = ee.emp_id
         where e.id = #{id};
     </select>
+    <!--    统计员工职位人数    -->
+    <select id="countEmpJobData" resultType="java.util.Map">
+        SELECT CASE
+                   WHEN job = 1 THEN '班主任'
+                   WHEN job = 2 THEN '讲师'
+                   WHEN job = 3 THEN '学工主管'
+                   WHEN job = 4 THEN '教研主管'
+                   WHEN job = 5 THEN '咨询师'
+                   ELSE '其他'
+                   END  as pos,
+               COUNT(*) as count
+        FROM emp
+        GROUP BY job
+        ORDER BY job
+    </select>
 
 
 </mapper>
 
+        <!-- set自动删除多余的逗号，where自动删除多余的and -->

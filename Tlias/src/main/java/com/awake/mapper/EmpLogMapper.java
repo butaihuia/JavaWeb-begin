@@ -1,4 +1,5 @@
 package com.awake.mapper;
+//日志数据
 
 import com.awake.pojo.EmpLog;
 import org.apache.ibatis.annotations.Insert;

@@ -65,7 +65,8 @@ public class DeptController {
 //    }
     //查询回显
     @GetMapping("/{id}")
-    public Result getInfo(@PathVariable Integer id) {//省略后要与路径参数名一致
+    public Result getInfo(@PathVariable Integer id) {
+        //省略后要与路径参数名一致
 //        System.out.println("根据id查询部门信息 "+ id);
         log.info("根据id查询部门信息 {}", id);
         Dept dept = deptService.getById(id);//deptService调用service方法 返回值给结果result返回前端
@@ -74,7 +75,8 @@ public class DeptController {
 
     //    修改部门
     @PutMapping
-    public Result update(@RequestBody Dept dept) {//@RequestBody接受返回的body封装成json格式传给dept
+    public Result update(@RequestBody Dept dept) {
+        //@RequestBody接受返回的body封装成json格式传给dept
 //        System.out.println("修改部门信息 "+ dept);
         log.info("修改部门信息 {}", dept);
         deptService.update(dept);

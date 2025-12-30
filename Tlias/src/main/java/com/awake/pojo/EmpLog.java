@@ -1,4 +1,5 @@
 package com.awake.pojo;
+//员工操作日志类
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
